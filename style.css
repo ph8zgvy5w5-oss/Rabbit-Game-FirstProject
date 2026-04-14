@@ -7,3 +7,51 @@ body {
     width: 450px;
 }
 
+#start-button {
+
+    box-sizing: border-box;
+    font-family: ('Patrick Hand SC');
+    border: solid 5px #bc388e;
+
+    box-shadow:2px 8px 4px -6px hsla(0,0%,0%,.3);
+
+    background-color:transparent;
+    
+    transition:all .5s;
+
+    /*box-shadow: 20px 38px 34px -26px hsla(0,0%,0%,.2);*/
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+
+    margin-top: 250px;
+}
+
+#jump-text {
+    color:#bc388e;
+    margin-right: 150px;
+}
+
+#game-screen {
+    display: none;
+    align-content: center;
+    background-image: url('../GameProject/Images/jardin.png');
+    background-size: cover;
+    animation: slide 5s linear infinite;
+
+}
+
+#game-intro {
+    background-image: url('./Images/rabbit.png');
+    height: 500px;
+    width: 500px;
+    background-size: cover;
+    position: absolute;
+
+}
+
+#game-end {
+    display: none;
+}
+
+#game-container {
+    display: none;
+}

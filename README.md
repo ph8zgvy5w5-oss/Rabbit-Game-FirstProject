@@ -25,3 +25,4 @@ first apply the html
 ☑️ Attribution de l'IA (le cas échéant)
 
 
+use some IA for the img 
