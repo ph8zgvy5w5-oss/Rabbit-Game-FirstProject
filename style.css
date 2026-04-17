@@ -1,5 +1,6 @@
 body {
-    padding: 0;
+    padding: 50px 150px;
+    margin-right: 500px;
     text-align: center
 }
 
@@ -8,6 +9,9 @@ body {
 }
 
 #start-button {
+
+    cursor: pointer;
+    /*cursor-color: pink;*/
 
     box-sizing: border-box;
     font-family: ('Patrick Hand SC');
@@ -33,9 +37,13 @@ body {
 #game-screen {
     display: none;
     align-content: center;
-    background-image: url('../GameProject/Images/jardin.png');
+    padding: 30px 0px;
+    overflow: hidden; 
+    position: relative;
+    background-image: url('./Images/jardin.png');
     background-size: cover;
     animation: slide 5s linear infinite;
+
 
 }
 
@@ -53,5 +61,5 @@ body {
 }
 
 #game-container {
-    display: none;
+    display: flex;
 }
