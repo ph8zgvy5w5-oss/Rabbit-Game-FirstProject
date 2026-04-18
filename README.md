@@ -8,7 +8,7 @@
 Summary 
 rules of the game
 
-pick up the eggs more often you can before ?
+pick up the eggs more often you can before they fall
 
 
 </detail>

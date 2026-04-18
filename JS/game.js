@@ -15,10 +15,12 @@ class Game {
     this.counter = 0;
     this.gameOver = false;
     this.obstacles = [];
-    this.baskets = [];
+   // this.goldEgg = [];
     this.gameIntervalId = null;
     this.gameLoopFrequency = 1000 / 60;
-
+    this.jumpSong = new Audio('../sounds/rabbitJumpSong.mp3');
+    this.jumpSong.volume = 0.2;
+    this.gameOverSound = new Audio('../sounds/gameOverSound.mp3')
 } ;
 
 startGame () {
@@ -42,7 +44,22 @@ startGame () {
   //generateObstacles()
 //}, 6000)
 
+this.generateLivesImg()
+
 };
+
+generateLivesImg() {
+   for (let i=0; i < 3; i++) {
+      const livesImg = document.createElement("img")
+      if (i < this.life) {
+         livesImg.src('../Images/oeufSsFond.jpg')
+      }else {
+         livesImg.src('../Images/oeufSsFond 2.png')
+      }
+      livesImg.classList.add("eggLives");
+      this.lifeElement.appendchild(livesImg);
+   }
+}
 
 gameLoop() {
     this.update()
@@ -60,7 +77,6 @@ this.player.move()
 if(this.counter % 100 === 0) {
 this.obstacles.push(new Obstacles(this.gameScreen))
 }
-//this.obstacles.push(new Obstacles(this.gameScreen))
 
  for ( let i=0; i < this.obstacles.length; i++ ) {
     const obstacle = this.obstacles[i]
@@ -73,20 +89,31 @@ this.obstacles.push(new Obstacles(this.gameScreen))
       this.eggcount.innerText = this.egg
  }
 
- if(obstacle.top > 400) {
+   if (obstacle.top > 400) {
     obstacle.element.remove()
-    this.obstacles.splice(i, 1)
- this.life--
- this.livesElement.innerText = this.life
+       this.obstacles.splice(i, 1)
+       this.life--
+       this.livesElement.innerText = this.life
  }
 
- if(this.life === 0 ) {
-    this.gameIsOver = true
+  // if (this.egg === 10) {
+  //    this.element.src = "../Images/goldEgg2.png"
+
+// }
+
+   if(this.life === 0 ) {
+       this.gameIsOver = true
+       this.gameOverSound.play()
  }
 
 };
 
 }
+
+playRabbitJumpSound () {
+   this.jumpSong.play();
+}
+
 }
 
 

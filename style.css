@@ -64,3 +64,27 @@ body {
 #game-container {
     display: block;
 }
+
+
+#restart-button {
+
+    cursor: pointer;
+    /*cursor-color: pink;*/
+
+    box-sizing: border-box;
+    font-family: ('Patrick Hand SC');
+    border: solid 7px #bc388e;
+
+    box-shadow:2px 8px 4px -6px hsla(0,0%,0%,.3);
+
+    background-color:transparent;
+    transition:all .5s;
+
+    /*box-shadow: 20px 38px 34px -26px hsla(0,0%,0%,.2);*/
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+
+}
+
+.eggLives {
+    height: 50px;
+}
