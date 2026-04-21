@@ -1,35 +1,46 @@
-![logo_euga]()
+![logo_euga](./Images/logoeugA.mp4)
 
-# LAB | Rabbit-Game-FirstProject
+# Project | 🐰  Rabbit-Game-FirstProject 
 
-![Island Racer Logo]()
+![Game Screenshot](./Images/Capture%20d’écran%202026-04-21%20à%2018.27.21.png)
+
 
 <details>
-Summary 
-rules of the game
 
-pick up the eggs more often you can before they fall
+## 🎮 Description
 
+
+Rabbit Game is a simple arcade-style browser game where the player must catch falling eggs to score points.
+
+The objective is to collect as many eggs as possible before they fall off the screen. The game becomes progressively more challenging over time.
+
+## 🕹️ How to Play
+- Use arrow keys to move:
+- Left / Right / Up / Down
+- Catch the eggs before they hit the ground
+- Each egg increases your score
+- Try to survive as long as possible
+
+- Visual bonus Space it.
+
+## 🚀 Live Demo
+*()*
+
+## ⚙️ Installation
+
+```bash
+git clone 'https://github.com/your-username/rabbit-game.git'
+cd 'rabbit-game'
+open 'index.html'
 
 </detail>
 
-first apply the html 
 
-☑️ Titre et brève description du projet-
-☑️ Capture d'écran ou lien vers une démo en direct
-☑️ Instructions d'installation (cloner, installer, exécuter)
-☑️ Technologies utilisées
-☑️ Fonctionnalités
-☑️ Objectifs d'apprentissage
-☑️ Auteur(s)-
-☑️ Attribution de l'IA (le cas échéant)-
+<Other point>
 
+My futur changes:
 attriubte 3 level + add 3egg level color after 10egg or +
 add some egg song when they been grap
-try to 
-need change the size of player
 
-
-
-
-use some IA for the img 
+used some IA for the img and this helping redaction on RMfiles.
+</Other point>

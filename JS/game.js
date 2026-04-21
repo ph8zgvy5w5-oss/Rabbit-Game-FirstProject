@@ -21,7 +21,8 @@ class Game {
     this.jumpSong = new Audio('../sounds/rabbitJumpSong.mp3');
     this.jumpSong.volume = 0.2;
     this.gameOverSound = new Audio('../sounds/gameOverSound.mp3')
-} ;
+    //this.generateLivesImg = document.querySelector("#level")
+};
 
 startGame () {
    //console.log("gameStarted")
@@ -44,22 +45,22 @@ startGame () {
   //generateObstacles()
 //}, 6000)
 
-this.generateLivesImg()
+//this.generateLivesImg()
 
 };
 
-generateLivesImg() {
-   for (let i=0; i < 3; i++) {
-      const livesImg = document.createElement("img")
-      if (i < this.life) {
-         livesImg.src('../Images/oeufSsFond.jpg')
-      }else {
-         livesImg.src('../Images/oeufSsFond 2.png')
-      }
-      livesImg.classList.add("eggLives");
-      this.lifeElement.appendchild(livesImg);
-   }
-}
+//generateLivesImg() {
+  // for (let i = 0; i < 3; i++) {
+  //    const livesImg = document.createElement("img")
+   //   if (i < this.life) {
+    //     livesImg.src('../Images/oeufSsFond.jpg')
+   //   }else {
+   //      livesImg.src('../Images/oeufSsFond 2.png')
+   //   }
+   //   livesImg.classList.add("eggLives");
+    //  this.livesElement.appendchild(livesImg);
+ //  }
+//}
 
 gameLoop() {
     this.update()
@@ -70,6 +71,19 @@ gameLoop() {
          this.endScreen.style.display = "block"
 }
 };
+
+generateEgg() {
+    let egg = document.createElement("img")
+
+    egg.style.position = "absolute"
+    let top = 0
+    let left = Math.floor(Math.random() * 450)
+
+    egg.style.top = top + "px"
+    egg.style.left = left + "px"
+
+
+}
 
 update() {   
     
@@ -87,6 +101,7 @@ this.obstacles.push(new Obstacles(this.gameScreen))
         this.egg++
   
       this.eggcount.innerText = this.egg
+
  }
 
    if (obstacle.top > 400) {
@@ -96,15 +111,11 @@ this.obstacles.push(new Obstacles(this.gameScreen))
        this.livesElement.innerText = this.life
  }
 
-  // if (this.egg === 10) {
-  //    this.element.src = "../Images/goldEgg2.png"
-
-// }
-
    if(this.life === 0 ) {
        this.gameIsOver = true
        this.gameOverSound.play()
  }
+
 
 };
 
