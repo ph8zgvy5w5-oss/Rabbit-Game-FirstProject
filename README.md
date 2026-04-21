@@ -24,7 +24,7 @@ The objective is to collect as many eggs as possible before they fall off the sc
 - Visual bonus Space it.
 
 ## 🚀 Live Demo
-*(https://ph8zgvy5w5-oss.github.io/Rabbit-Game-FirstProject/)*
+*https://ph8zgvy5w5-oss.github.io/Rabbit-Game-FirstProject/*
 
 ## ⚙️ Installation
 
