@@ -10,7 +10,7 @@ constructor(gameScreen, left, top, width, height){
     this.directionY = 0
     this.element = document.createElement("img")
 
-    this.element.src = "../Images/player3.1.png"
+    this.element.src = "./Images/player3.1.png"
     this.element.style.position = "absolute"
     this.element.style.left = left + "px"
     this.element.style.top = top + "px"
