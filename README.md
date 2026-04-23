@@ -33,14 +33,12 @@ git clone 'https://github.com/your-username/rabbit-game.git'
 cd 'rabbit-game'
 open 'index.html'
 
-</detail>
 
 
-<Other point>
+*Other point
 
 My futur changes:
 attriubte 3 level + add 3egg level color after 10egg or +
 add some egg song when they been grap
 
 used some IA for the img and this helping redaction on RMfiles.
-</Other point>
