@@ -18,9 +18,9 @@ class Game {
    // this.goldEgg = [];
     this.gameIntervalId = null;
     this.gameLoopFrequency = 1000 / 60;
-    this.jumpSong = new Audio('../sounds/rabbitJumpSong.mp3');
+    this.jumpSong = new Audio('./sounds/rabbitJumpSong.mp3');
     this.jumpSong.volume = 0.2;
-    this.gameOverSound = new Audio('../sounds/gameOverSound.mp3')
+    this.gameOverSound = new Audio('./sounds/gameOverSound.mp3')
     //this.generateLivesImg = document.querySelector("#level")
 };
 
@@ -31,7 +31,8 @@ startGame () {
 
    this.gameScreen.style.width = this.width + "px";
    this.gameScreen.style.height = this.height + "px";
-   
+  //  this.livesElement.innerText = this.life
+
    this.player = new Player(this.gameScreen, 240, 300, 120, 120)
 
 
@@ -107,8 +108,10 @@ this.obstacles.push(new Obstacles(this.gameScreen))
    if (obstacle.top > 400) {
     obstacle.element.remove()
        this.obstacles.splice(i, 1)
+       const fullEgg = document.querySelector(`#life${this.life}`)
+       fullEgg.src = "./Images/oeufSsFond 2.png"
        this.life--
-       this.livesElement.innerText = this.life
+      //  this.livesElement.innerText = this.life
  }
 
    if(this.life === 0 ) {

@@ -6,10 +6,11 @@ body {
 }
 
 .start-img {
-    width: 450px;
+    width: 400px;
 }
 
 #start-button {
+
 
     cursor: pointer;
     /*cursor-color: pink;*/
@@ -28,6 +29,8 @@ body {
     border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
 
     margin-top: 250px;
+
+    
 }
 
 #jump-text {
@@ -44,6 +47,7 @@ body {
     background-image: url('./Images/jardin.png');
     background-size: cover;
     animation: slide 5s linear infinite;
+    object-fit: cover;
 
 
 }
@@ -54,7 +58,7 @@ body {
     width: 500px;
     background-size: cover;
     position: absolute;
-
+    
 }
 
 #game-end {
@@ -87,4 +91,19 @@ body {
 
 .eggLives {
     height: 50px;
+}
+
+ #life1, #life2, #life3 {
+    width: 50px
+ }
+
+/*@media screen and (min-width: 300px) {
+body {
+    background-color: black;
+}
+    
+}
+
+/*@media screen and (min-width 1000px) {
+    
 }

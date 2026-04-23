@@ -1,4 +1,4 @@
-![logo_euga](./Images/logo%20euga.png)
+![logo_euga](./Images/euga.png)
 
 # Project | 🐰  Rabbit-Game-FirstProject 
 
