@@ -10,7 +10,7 @@ class Game {
     this.height = 400;
     this.width = 800;
     this.player = null;
-    this.egg = [];
+    this.egg = 0;
     this.life = 3;
     this.counter = 0;
     this.gameOver = false;
@@ -20,7 +20,10 @@ class Game {
     this.gameLoopFrequency = 1000 / 60;
     this.jumpSong = new Audio('./sounds/rabbitJumpSong.mp3');
     this.jumpSong.volume = 0.2;
-    this.gameOverSound = new Audio('./sounds/gameOverSound.mp3')
+    this.gameOverSound = new Audio('./sounds/gameOverSound.mp3');
+    this.pingEgg = new Audio('./sounds/ping.mp3');
+    this.pingEgg.volume = 0.2
+    this.goldSound = new Audio('./sounds/goldSound.mp3')
     //this.generateLivesImg = document.querySelector("#level")
 };
 
@@ -90,20 +93,42 @@ update() {
     
 this.player.move()
 if(this.counter % 100 === 0) {
-this.obstacles.push(new Obstacles(this.gameScreen))
+//this.obstacles.push(new Obstacles(this.gameScreen));
+const newObstacle = new Obstacles(this.gameScreen);
+
+if (this.egg >= 10 && Math.random() > 0.7) { 
+    newObstacle.element.style.width = "70px";
+    newObstacle.element.style.height = "70px";
+    newObstacle.element.src = "./Images/goldEgg2.png";
+    newObstacle.isGold = true;
+   } else {
+    newObstacle.isGold = false;
+   }
+
+   this.obstacles.push(newObstacle);
+
 }
 
  for ( let i=0; i < this.obstacles.length; i++ ) {
     const obstacle = this.obstacles[i]
     obstacle.move()
    if (this.player.didCollide(obstacle)) {
+      if (obstacle.isGold === true){
+      this.goldSound.play()
+      this.egg += 3;
+      } else {
+      this.egg +=1
+    }
+    this.eggcount.innerText = this.egg
+
         obstacle.element.remove()
         this.obstacles.splice(i, 1)
-        this.egg++
-  
-      this.eggcount.innerText = this.egg
+        this.pingEgg.play()
+        i--
 
  }
+
+
 
    if (obstacle.top > 400) {
     obstacle.element.remove()
