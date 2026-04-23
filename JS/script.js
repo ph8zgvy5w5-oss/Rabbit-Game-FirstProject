@@ -42,7 +42,7 @@ document.addEventListener("keydown", (e) => {
     }
 
     if (e.code === "Space") {
-        newGame.player.element.src = "../Images/player.png"
+        newGame.player.element.src = "./Images/player.png"
         newGame.playRabbitJumpSound();
     }
 
