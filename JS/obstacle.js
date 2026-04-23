@@ -7,7 +7,7 @@ class Obstacles{
     this.height = 45
     this.element = document.createElement("img")
 
-    this.element.src = "./Images/oeufSsFond.jpg"
+    this.element.src = "../Images/oeufSsFond.jpg"
     this.element.style.position = "absolute"
     this.element.style.left = this.left + "px"
     this.element.style.top = this.top + "px"

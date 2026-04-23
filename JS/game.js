@@ -18,9 +18,9 @@ class Game {
    // this.goldEgg = [];
     this.gameIntervalId = null;
     this.gameLoopFrequency = 1000 / 60;
-    this.jumpSong = new Audio('./sounds/rabbitJumpSong.mp3');
+    this.jumpSong = new Audio('../sounds/rabbitJumpSong.mp3');
     this.jumpSong.volume = 0.2;
-    this.gameOverSound = new Audio('./sounds/gameOverSound.mp3')
+    this.gameOverSound = new Audio('../sounds/gameOverSound.mp3')
     //this.generateLivesImg = document.querySelector("#level")
 };
 
@@ -109,7 +109,7 @@ this.obstacles.push(new Obstacles(this.gameScreen))
     obstacle.element.remove()
        this.obstacles.splice(i, 1)
        const fullEgg = document.querySelector(`#life${this.life}`)
-       fullEgg.src = "./Images/oeufSsFond 2.png"
+       fullEgg.src = "../Images/oeufSsFond2.png"
        this.life--
       //  this.livesElement.innerText = this.life
  }
