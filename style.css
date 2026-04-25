@@ -11,9 +11,9 @@ body {
 
 #start-button {
 
-
+    text-decoration: none;
+    color : #bc388e;
     cursor: pointer;
-    /*cursor-color: pink;*/
 
     box-sizing: border-box;
     font-family: ('Patrick Hand SC');
@@ -72,6 +72,11 @@ body {
 
 #restart-button {
 
+    text-decoration: none;
+    text-decoration: none;
+    color : #bc388e;
+
+
     cursor: pointer;
     /*cursor-color: pink;*/
 
@@ -97,6 +102,18 @@ body {
     width: 25px
  }
 
+ .title {
+    color: #bc388e;
+    font-family:'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: oblique 80deg;
+ }
+
+ #egg-count {
+
+    font-size: xx-large;
+    color: rgba(15, 150, 203, 0.993);
+ }
+
 /*@media screen and (min-width: 300px) {
 body {
     background-color: black;
@@ -107,3 +124,4 @@ body {
 /*@media screen and (min-width 1000px) {
     
 }
+
